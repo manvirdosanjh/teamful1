@@ -218,8 +218,11 @@ export class BookingDatesFormComponent extends Component {
                 id={this.numberOfPersonsId}
                 ref={this.numberOfPersonsInput}
                 type="number"
+                inputmode="numeric"
+                min="1"
+                max="100"
                 name={this.numberOfPersonsId}
-                label="Number of people"
+                label="Group size"
                 value="1"
                 placeholder="8"
                 useMobileMargins
