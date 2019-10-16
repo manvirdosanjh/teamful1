@@ -208,7 +208,7 @@ export class BookingDatesFormComponent extends Component {
                 id={this.timeSlotId}
                 ref={this.timeSlotDropdown}
                 name={this.timeSlotId}
-                label="Choose the time"
+                label="Choose start time"
                 startTimestamp={availabilityTimes.availableFromTimestamp}
                 endTimestamp={availabilityTimes.availableTillTimestamp}
                 useMobileMargins
@@ -217,11 +217,11 @@ export class BookingDatesFormComponent extends Component {
               <FieldNumOfPersonsInput
                 id={this.numberOfPersonsId}
                 ref={this.numberOfPersonsInput}
-                type="text"
+                type="number"
                 name={this.numberOfPersonsId}
-                label="Input the number of persons:"
+                label="Number of people"
                 value="1"
-                placeholder="Enter the number"
+                placeholder="8"
                 useMobileMargins
               />
               {bookingInfo}
