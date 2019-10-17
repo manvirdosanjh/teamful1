@@ -219,6 +219,7 @@ export class BookingDatesFormComponent extends Component {
                 ref={this.numberOfPersonsInput}
                 type="number"
                 inputmode="numeric"
+                pattern="[0-9]*"
                 min="1"
                 max="100"
                 name={this.numberOfPersonsId}
