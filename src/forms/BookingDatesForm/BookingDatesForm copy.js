@@ -41,7 +41,6 @@ export class BookingDatesFormComponent extends Component {
     let endDateObj = document.getElementById(`${this.props.formId}.bookingEndDate`);
 
     endDateObj.style.color = "white";
-    endDateObj.style.fontSize = "0px";
     endDateObj.onfocus = () => { startDateObj.focus(); }
   }
 
@@ -209,7 +208,7 @@ export class BookingDatesFormComponent extends Component {
                 id={this.timeSlotId}
                 ref={this.timeSlotDropdown}
                 name={this.timeSlotId}
-                label="Choose the time"
+                label="Choose start time"
                 startTimestamp={availabilityTimes.availableFromTimestamp}
                 endTimestamp={availabilityTimes.availableTillTimestamp}
                 useMobileMargins
@@ -219,12 +218,13 @@ export class BookingDatesFormComponent extends Component {
                 id={this.numberOfPersonsId}
                 ref={this.numberOfPersonsInput}
                 type="number"
+                pattern="[0-9]*"
                 min="1"
                 max="100"
                 name={this.numberOfPersonsId}
-                label="Choose team size"
+                label="Number of people"
                 value="1"
-                placeholder="12"
+                placeholder="8"
                 useMobileMargins
               />
               {bookingInfo}
