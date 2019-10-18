@@ -329,7 +329,7 @@
   "ListingCard.perUnit": "per unit",
   "ListingCard.unsupportedPrice": "({currency})",
   "ListingCard.unsupportedPriceTitle": "Unsupported currency ({currency})",
-  "ListingPage.bookingSubTitle": "Start by choosing a date and time.",
+  "ListingPage.bookingSubTitle": "You're almost out of the office...",
   "ListingPage.bookingTitle": "Book {title}",
   "ListingPage.closedListing": "This listing has been closed and can't be booked.",
   "ListingPage.contactUser": "Contact",
