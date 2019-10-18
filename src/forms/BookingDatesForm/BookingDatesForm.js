@@ -235,11 +235,14 @@ export class BookingDatesFormComponent extends Component {
               <FieldNumOfPersonsInput
                 id={this.numberOfPersonsId}
                 ref={this.numberOfPersonsInput}
-                type="text"
+                type="number"
+                patten="[0-9]*"
+                min="1"
+                max="100"
                 name={this.numberOfPersonsId}
-                label="Input the number of persons:"
+                label="Choose team size"
                 value="1"
-                placeholder="Enter the number"
+                placeholder="28"
                 useMobileMargins
               />
               {bookingInfo}
