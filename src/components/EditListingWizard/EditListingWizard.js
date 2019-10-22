@@ -32,7 +32,6 @@ const availabilityMaybe = config.enableAvailability ? [AVAILABILITY] : [];
 // All the other panels can be reordered.
 export const TABS = [
   DESCRIPTION,
-  FEATURES,
   POLICY,
   LOCATION,
   PRICING,

@@ -68,6 +68,7 @@ const SearchFiltersComponent = props => {
     resultsCount,
     searchInProgress,
     categoryFilter,
+    amenitiesFilter,
     priceFilter,
     dateRangeFilter,
     keywordFilter,
@@ -92,6 +93,10 @@ const SearchFiltersComponent = props => {
   const keywordLabel = intl.formatMessage({
     id: 'SearchFilters.keywordLabel',
   });
+
+  const initialAmenities = amenitiesFilter
+    ? initialValues(urlQueryParams, amenitiesFilter.paramName)
+    : null;
 
   const initialCategory = categoryFilter
     ? initialValue(urlQueryParams, categoryFilter.paramName)
@@ -172,6 +177,20 @@ const SearchFiltersComponent = props => {
     />
   ) : null;
 
+  const amenitiesFilterElement = amenitiesFilter ? (
+    <SelectMultipleFilter
+      id={'SearchFilters.amenitiesFilter'}
+      name="amenities"
+      urlParam={amenitiesFilter.paramName}
+      label={amenitiesLabel}
+      onSubmit={handleSelectOptions}
+      showAsPopup
+      options={amenitiesFilter.options}
+      initialValues={initialAmenities}
+      contentPlacementOffset={FILTER_DROPDOWN_OFFSET}
+    />
+  ) : null;
+
   const priceFilterElement = priceFilter ? (
     <PriceFilter
       id="SearchFilters.priceFilter"
@@ -231,6 +250,7 @@ const SearchFiltersComponent = props => {
     <div className={classes}>
       <div className={css.filters}>
         {categoryFilterElement}
+        {amenitiesFilterElement}
         {priceFilterElement}
         {dateRangeFilterElement}
         {keywordFilterElement}

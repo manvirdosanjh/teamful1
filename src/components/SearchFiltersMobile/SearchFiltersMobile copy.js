@@ -193,6 +193,7 @@ class SearchFiltersMobileComponent extends Component {
       onManageDisableScrolling,
       selectedFiltersCount,
       categoryFilter,
+      amenitiesFilter,
       priceFilter,
       dateRangeFilter,
       keywordFilter,
@@ -231,6 +232,23 @@ class SearchFiltersMobileComponent extends Component {
         options={categoryFilter.options}
         initialValue={initialCategory}
         intl={intl}
+      />
+    ) : null;
+
+    const amenitiesLabel = intl.formatMessage({ id: 'SearchFiltersMobile.amenitiesLabel' });
+
+    const initialAmenities = this.initialValues(amenitiesFilter.paramName);
+
+    const amenitiesFilterElement = amenitiesFilter ? (
+      <SelectMultipleFilter
+        id="SearchFiltersMobile.amenitiesFilter"
+        name="amenities"
+        urlParam={amenitiesFilter.paramName}
+        label={amenitiesLabel}
+        onSubmit={this.handleSelectMultiple}
+        liveEdit
+        options={amenitiesFilter.options}
+        initialValues={initialAmenities}
       />
     ) : null;
 
@@ -313,6 +331,7 @@ class SearchFiltersMobileComponent extends Component {
             <div className={css.filtersWrapper}>
               {keywordFilterElement}
               {categoryFilterElement}
+              {amenitiesFilterElement}
               {priceFilterElement}
               {dateRangeFilterElement}
             </div>
@@ -337,6 +356,7 @@ SearchFiltersMobileComponent.defaultProps = {
   selectedFiltersCount: 0,
   filterParamNames: [],
   categoryFilter: null,
+  amenitiesFilter: null,
   priceFilter: null,
   dateRangeFilter: null,
 };
@@ -356,6 +376,7 @@ SearchFiltersMobileComponent.propTypes = {
   selectedFiltersCount: number,
   filterParamNames: array,
   categoriesFilter: propTypes.filterConfig,
+  amenitiesFilter: propTypes.filterConfig,
   priceFilter: propTypes.filterConfig,
   dateRangeFilter: propTypes.filterConfig,
 
