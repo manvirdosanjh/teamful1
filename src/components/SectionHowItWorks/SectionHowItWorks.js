@@ -19,7 +19,7 @@ const SectionHowItWorks = props => {
 
       <div className={css.steps}>
         <div className={css.step}>
-        <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa75b-00c1-4209-af96-16a59ac0f96c?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=738e8ae408d2a1467f478f9614442170" height="72"></img>
+        <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa75b-00c1-4209-af96-16a59ac0f96c?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=738e8ae408d2a1467f478f9614442170" alt="unique-experiences" height="72"></img>
           <h2 className={css.stepTitle}>
             <FormattedMessage id="SectionHowItWorks.part1Title" />
           </h2>
@@ -29,7 +29,7 @@ const SectionHowItWorks = props => {
         </div>
 
         <div className={css.step}>
-        <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa75e-d897-433b-b954-ec443340e5e8?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=0ad0ca181be908c1f25c1812494a2f24" height="72"></img>
+        <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa75e-d897-433b-b954-ec443340e5e8?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=0ad0ca181be908c1f25c1812494a2f24" alt="perfect-fit" height="72"></img>
           <h2 className={css.stepTitle}>
             <FormattedMessage id="SectionHowItWorks.part2Title" />
           </h2>
@@ -39,7 +39,7 @@ const SectionHowItWorks = props => {
         </div>
 
         <div className={css.step}>
-          <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa761-8215-4fc6-96e4-4bdac3552dd3?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=714200013797f76ba8148b76e1c04eed" height="72"></img>
+          <br></br><img src="https://sharetribe.imgix.net/5d3161f9-74a0-41ce-8f06-6a3acc257b60%2F5dafa761-8215-4fc6-96e4-4bdac3552dd3?auto=format&fit=clip&h=1024&ixlib=java-1.1.1&w=1024&s=714200013797f76ba8148b76e1c04eed" alt="easy-bookings" height="72"></img>
           <h2 className={css.stepTitle}>
             <FormattedMessage id="SectionHowItWorks.part3Title" />
           </h2>
