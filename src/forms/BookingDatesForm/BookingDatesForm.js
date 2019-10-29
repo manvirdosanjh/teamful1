@@ -42,7 +42,9 @@ export class BookingDatesFormComponent extends Component {
 
     endDateObj.style.color = "white";
     endDateObj.style.fontSize = "0px";
-    endDateObj.onfocus = () => { startDateObj.focus(); }
+    endDateObj.onfocus = () => {
+      startDateObj.focus();
+    }
   }
 
   // In case start or end date for the booking is missing
@@ -138,11 +140,13 @@ export class BookingDatesFormComponent extends Component {
           ) : null;
 
           let numOfPersons = 1;
-          const numOfPersonsObj = document.getElementById(this.numberOfPersonsId);
-          if(numOfPersonsObj) {
-            const numOfPersonsVal = numOfPersonsObj.value;
-            if(/^[0-9]+$/.test(numOfPersonsVal)) {
-              numOfPersons = parseInt(numOfPersonsVal, 10);
+          if(typeof document !== "undefined") {
+            const numOfPersonsObj = document.getElementById(this.numberOfPersonsId);
+            if (numOfPersonsObj) {
+              const numOfPersonsVal = numOfPersonsObj.value;
+              if (/^[0-9]+$/.test(numOfPersonsVal)) {
+                numOfPersons = parseInt(numOfPersonsVal, 10);
+              }
             }
           }
 
@@ -223,7 +227,7 @@ export class BookingDatesFormComponent extends Component {
                 id={this.timeSlotId}
                 ref={this.timeSlotDropdown}
                 name={this.timeSlotId}
-                label="Choose the time"
+                label="Choose start time"
                 startTimestamp={availabilityTimes.availableFromTimestamp}
                 endTimestamp={availabilityTimes.availableTillTimestamp}
                 useMobileMargins
@@ -233,12 +237,12 @@ export class BookingDatesFormComponent extends Component {
                 id={this.numberOfPersonsId}
                 ref={this.numberOfPersonsInput}
                 type="number"
-                patten="[0-9]*"
-                min="1"
-                max="100"
+                pattern="[0-9]*"
                 name={this.numberOfPersonsId}
                 label="Choose team size"
                 value="1"
+                min="1"
+                max="100"
                 placeholder="28"
                 useMobileMargins
               />
