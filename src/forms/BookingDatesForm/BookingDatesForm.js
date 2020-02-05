@@ -243,7 +243,7 @@ export class BookingDatesFormComponent extends Component {
                 value="1"
                 min="1"
                 max="100"
-                placeholder="28"
+                placeholder="8"
                 useMobileMargins
               />
               {bookingInfo}
