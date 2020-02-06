@@ -14,6 +14,22 @@ way to update this template, but currently, we follow a pattern:
 
 ## Upcoming version 2019-XX-XX
 
+## [v4.0.0] 2019-12-19
+
+- [change] Use Stripe's [Connect onboarding](https://stripe.com/docs/connect/connect-onboarding) for
+  adding and updating the identity information of the Stripe account.
+  - Before updating to this version you should check
+    [the related pull request](https://github.com/sharetribe/ftw-daily/pull/1234)
+  - Read more from documentation:
+    [How to handle provider onboarding and identity verification on FTW](https://www.sharetribe.com/docs/guides/provider-onboarding-and-identity-verification/)
+
+**Note:** In this update we have deprecated the old `PayoutDetailsForm` and `PayoutPreferencesPage`.
+Form now on Stripe will handle collecting the identity information required for verificating the
+Stripe account. On FTW we will only handle creating the new account and adding and updating
+information about bank account (e.g. IBAN number). If you want to keep using the custom form inside
+your application you need to make sure that you are collecting all the required information and
+enabling users to update the account so that it doesn't get restricted.
+
 - [fix] Update yarn.lock (there was Lodash version resolution missing)
   [#1190](https://github.com/sharetribe/flex-template-web/pull/1190)
 

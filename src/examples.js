@@ -41,6 +41,7 @@ import * as IconSocialMediaFacebook from './components/IconSocialMediaFacebook/I
 import * as IconSocialMediaInstagram from './components/IconSocialMediaInstagram/IconSocialMediaInstagram.example';
 import * as IconSocialMediaTwitter from './components/IconSocialMediaTwitter/IconSocialMediaTwitter.example';
 import * as IconSpinner from './components/IconSpinner/IconSpinner.example';
+import * as IconSuccess from './components/IconSuccess/IconSuccess.example';
 import * as ImageCarousel from './components/ImageCarousel/ImageCarousel.example';
 import * as KeywordFilter from './components/KeywordFilter/KeywordFilter.example';
 import * as ListingCard from './components/ListingCard/ListingCard.example';
@@ -84,7 +85,6 @@ import * as FilterForm from './forms/FilterForm/FilterForm.example';
 import * as LoginForm from './forms/LoginForm/LoginForm.example';
 import * as PasswordRecoveryForm from './forms/PasswordRecoveryForm/PasswordRecoveryForm.example';
 import * as PasswordResetForm from './forms/PasswordResetForm/PasswordResetForm.example';
-import * as PayoutDetailsForm from './forms/PayoutDetailsForm/PayoutDetailsForm.example';
 import * as ReviewForm from './forms/ReviewForm/ReviewForm.example';
 import * as SendMessageForm from './forms/SendMessageForm/SendMessageForm.example';
 import * as SignupForm from './forms/SignupForm/SignupForm.example';
@@ -149,6 +149,7 @@ export {
   IconSocialMediaInstagram,
   IconSocialMediaTwitter,
   IconSpinner,
+  IconSuccess,
   ImageCarousel,
   KeywordFilter,
   ListingCard,
@@ -164,7 +165,6 @@ export {
   PaginationLinks,
   PasswordRecoveryForm,
   PasswordResetForm,
-  PayoutDetailsForm,
   PriceFilter,
   PropertyGroup,
   RangeSlider,
