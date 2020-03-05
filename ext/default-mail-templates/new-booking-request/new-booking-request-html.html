@@ -12,7 +12,7 @@
     {{#with transaction}}
     <h1>Please respond to a request by {{customer.display-name}}</h1>
 
-    <p>Good news! {{customer.display-name}} just requested to book {{listing.title}} from {{> format-date date=booking.start}} to {{> format-date date=booking.end}}. Here's the breakdown.</p>
+    <p>Good news! {{customer.display-name}} just requested to book {{listing.title}} on {{> format-date date=booking.start}}. Here's the breakdown.</p>
 
     <table>
       <thead>
@@ -25,7 +25,7 @@
         {{#contains include-for "provider"}}
           <tr>
             {{#eq "line-item/day" code}}
-            <td>{{> format-money money=unit-price}} &times; {{number quantity}} {{inflect quantity "day" "days"}}</td>
+            <td>{{> format-money money=unit-price}} &times; {{number quantity}} {{inflect quantity "person" "people"}}</td>
             <td style="text-align: right; padding-left: 20px">{{> format-money money=line-total}}</td>
             {{/eq}}
 
@@ -50,7 +50,7 @@
       </tfoot>
     </table>
 
-    <p>You need to accept the request by {{> format-date date=delayed-transition.run-at}}. Otherwise the request will be expired and you won't get paid. If the booked dates won't work for you, you can also choose to decline the request.</p>
+    <p>You need to accept the request within 24 hours by {{> format-date date=delayed-transition.run-at}}. Otherwise the request will be expired and you won't get paid. If the booked dates won't work for you, you can also choose to decline the request.</p>
 
     <p><a href="{{marketplace.url}}/sale/{{url-encode id}}/details">Accept or decline the booking</a></p>
 
