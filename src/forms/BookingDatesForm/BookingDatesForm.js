@@ -141,7 +141,12 @@ export class BookingDatesFormComponent extends Component {
 
           let numOfPersons = 1;
           if(typeof document !== "undefined") {
-            const numOfPersonsObj = document.getElementById(this.numberOfPersonsId);
+            console.log('numberOfPersonsId : ' + this.numberOfPersonsId);
+            let numOfPersonsObj = document.getElementById(this.numberOfPersonsId);
+            if(!numOfPersonsObj){
+              numOfPersonsObj = document.getElementsByClassName("numberOfPersons")[0];
+            }
+
             if (numOfPersonsObj) {
               const numOfPersonsVal = numOfPersonsObj.value;
               if (/^[0-9]+$/.test(numOfPersonsVal)) {

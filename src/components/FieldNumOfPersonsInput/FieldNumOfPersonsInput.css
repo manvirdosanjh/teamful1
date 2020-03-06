@@ -18,6 +18,10 @@
 .textarea {
 }
 
+.numberOfPersons {
+
+}
+
 /**
  * Mobile margins mean that labels, inputs (incl separate borders) get margins,
  * but calendar popup doesn't.

@@ -50,13 +50,14 @@ class FieldNumOfPersonsInputComponent extends Component {
     // Use inputRef if it is passed as prop.
     const refMaybe = inputRef ? { ref: inputRef } : {};
 
-    const inputClasses =
+    let inputClasses =
       inputRootClass ||
       classNames(css.input, {
         [css.inputSuccess]: valid,
         [css.inputError]: hasError,
         [css.textarea]: isTextarea,
       });
+    inputClasses = inputClasses + ' ' + 'numberOfPersons';
     const maxLength = CONTENT_MAX_LENGTH;
     const inputProps = isTextarea
       ? {
