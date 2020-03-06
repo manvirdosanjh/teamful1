@@ -195,7 +195,7 @@ class DateTFInputComponent extends Component {
       dateBorders[0].classList.add(classNames({[fieldCss.mobileMargins]: this.props.useMobileMargins}));
     }
 
-    this.props.onBlur();
+    // this.props.onBlur();
 
     this.props.onChange({ startDate: startDateAsDate, endDate: endDateAsDate });
   }
