@@ -92,7 +92,7 @@ const LineItemBookingPeriod = props => {
   return (
     <div className={css.lineItem}>
       <span className={css.itemLabel}>
-        <BookingPeriod isSingleDay={isSingleDay} startDate={localStartDate} endDate={endDay}
+        <BookingPeriod isSingleDay={isSingleDay} startDate={displayStart || start} endDate={endDay}
                        startTime={startTime}/>
       </span>
       <span className={css.itemValue}>{unitCountMessage}</span>
