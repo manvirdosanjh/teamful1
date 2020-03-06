@@ -187,7 +187,9 @@ class DateTFInputComponent extends Component {
     const dateRangePicker = document.querySelector(".DateRangePicker_picker");
     dateRangePicker.style.display = "none";
     const numberOfPersonsObj = document.querySelector("#" + this.props.numberOfPersonsId);
-    /*numberOfPersonsObj.parentNode.parentNode.click();*/
+    if( !!numberOfPersonsObj && !!numberOfPersonsObj.parentNode && !!numberOfPersonsObj.parentNode.parentNode) {
+      numberOfPersonsObj.parentNode.parentNode.click();
+    }
     const dateBorders = document.querySelectorAll("[class*=FieldDateRangeInput_inputBorders]");
     if (dateBorders && dateBorders[0]) {
       dateBorders[0].classList.add(classNames({[fieldCss.mobileMargins]: this.props.useMobileMargins}));
